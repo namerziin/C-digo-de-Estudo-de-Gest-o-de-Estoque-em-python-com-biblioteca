@@ -1,0 +1,14 @@
+C:\Faculdade\Python\CursoPython\bin\Debug\net10.0\CursoPython.exe
+C:\Faculdade\Python\CursoPython\bin\Debug\net10.0\CursoPython.deps.json
+C:\Faculdade\Python\CursoPython\bin\Debug\net10.0\CursoPython.runtimeconfig.json
+C:\Faculdade\Python\CursoPython\bin\Debug\net10.0\CursoPython.dll
+C:\Faculdade\Python\CursoPython\bin\Debug\net10.0\CursoPython.pdb
+C:\Faculdade\Python\CursoPython\obj\Debug\net10.0\CursoPython.GeneratedMSBuildEditorConfig.editorconfig
+C:\Faculdade\Python\CursoPython\obj\Debug\net10.0\CursoPython.AssemblyInfoInputs.cache
+C:\Faculdade\Python\CursoPython\obj\Debug\net10.0\CursoPython.AssemblyInfo.cs
+C:\Faculdade\Python\CursoPython\obj\Debug\net10.0\CursoPython.csproj.CoreCompileInputs.cache
+C:\Faculdade\Python\CursoPython\obj\Debug\net10.0\CursoPython.dll
+C:\Faculdade\Python\CursoPython\obj\Debug\net10.0\refint\CursoPython.dll
+C:\Faculdade\Python\CursoPython\obj\Debug\net10.0\CursoPython.pdb
+C:\Faculdade\Python\CursoPython\obj\Debug\net10.0\CursoPython.genruntimeconfig.cache
+C:\Faculdade\Python\CursoPython\obj\Debug\net10.0\ref\CursoPython.dll
