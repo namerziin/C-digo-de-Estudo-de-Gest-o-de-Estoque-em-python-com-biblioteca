@@ -1,20 +1,19 @@
-
-#Sistema de Gestão Estoque
-estoque = { #dicionário onde a chave é o nome do produto, pois achei mais fácil de desenvolver por esse modelo.
+# Sistema de Gestão Estoque
+estoque = { # Dicionário onde a chave é o nome do produto
     "Blusas": {
         "Quantidade": 10,
         "ValorOriginal": 20,
-        "ValorFinal":20
+        "ValorFinal": 20
     },
     "Bermudas": {
         "Quantidade": 5,
         "ValorOriginal": 40,
-        "ValorFinal":40
+        "ValorFinal": 40
     },
     "Calças": {
         "Quantidade": 8,
         "ValorOriginal": 60,
-        "ValorFinal":60
+        "ValorFinal": 60
     }
 }
 while True:
@@ -32,9 +31,9 @@ while True:
         status = ""  # Reseta o status a cada visualização
         print("\nESTOQUE ATUAL:\n")
 
-        for produto, dados in estoque.items():#FOR para percorrer todo o dicionário
-            quantidade = dados["Quantidade"]#Adicionei um if para automatizar uma promoção quando o estoque estiver alto
-            if quantidade > 50:
+        for produto, dados in estoque.items(): # FOR para percorrer todo o dicionário
+            quantidade = dados["Quantidade"]
+            if quantidade > 50: # Validação de promoção
                 dados["ValorFinal"] = dados["ValorOriginal"] * 90 / 100
                 status = "Produto em promoção: "
 
@@ -60,8 +59,12 @@ while True:
 
             try:
                 quantidade = int(input("Digite a quantidade de entrada: "))
-                estoque[produto]["Quantidade"] += quantidade
-                print("Estoque atualizado com sucesso!\n")
+
+                if quantidade <= 0:
+                    print("Quantidade inválida\n")
+                else:
+                    estoque[produto]["Quantidade"] += quantidade
+                    print("Estoque atualizado com sucesso!\n")
 
             except ValueError:
                 print("Digite apenas números inteiros\n")
@@ -79,13 +82,15 @@ while True:
             try:
                 quantidade = int(input("Digite a quantidade de saída: "))
 
-                if estoque[produto]["Quantidade"] >= quantidade:
-
-                    estoque[produto]["Quantidade"] -= quantidade
-                    print("Saída realizada com sucesso!\n")
+                if quantidade <= 0:
+                    print("Quantidade inválida\n")
 
                 else:
-                    print("Estoque insuficiente\n")
+                    if quantidade > estoque[produto]["Quantidade"]:
+                        print("Quantidade insuficiente em estoque\n")
+                    else:
+                        estoque[produto]["Quantidade"] -= quantidade
+                        print("Estoque atualizado com sucesso!\n")
 
             except ValueError:
                 print("Digite apenas números inteiros\n")
